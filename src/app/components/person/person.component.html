@@ -1,0 +1,40 @@
+<div>
+<mat-grid-list cols="2" rowHeight="4:1" style="border: 100%;" width="1000">
+  <mat-grid-tile 
+ class="mat-elevation-z8">
+
+  
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+      <ng-container *ngFor="let column of displayedColumns" [matColumnDef]="column">
+        <th mat-header-cell *matHeaderCellDef>
+          <div style="display: flex; align-items: center;">
+            <span mat-sort-header>{{column}}</span>
+           
+          </div>
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+      </ng-container>
+   
+  
+    
+      <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+    
+  
+    </table>
+    
+  </mat-grid-tile>
+ 
+
+
+  
+</mat-grid-list>
+</div>
+<div >
+  <img src="assets/images/example.jpg" width="600" >
+</div>
+    
+  
+  
+ 

@@ -1,0 +1,58 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" [opened]="openSideBar" style="width: 250px;">
+    <mat-nav-list>
+
+<mat-list-item  routerLink="dashboard">
+<mat-icon> dashboard</mat-icon><span>Dashboard</span>
+</mat-list-item>
+<mat-list-item  routerLink="person">
+    <mat-icon> fastfood </mat-icon><span> Menu</span>
+    </mat-list-item>
+
+<mat-list-item  routerLink="delivery">
+    <mat-icon> directions_bike </mat-icon><span> delivery </span>
+    </mat-list-item>
+   
+
+    <mat-list-item  routerLink="offers">
+        <mat-icon>  border_color</mat-icon><span> Orders </span>
+        </mat-list-item>
+        <mat-expansion-panel [class.mat.elevation-z0]="true">
+            <mat-expansion-panel-header>
+                <mat-icon> notes</mat-icon>
+                
+                Feedback
+            
+            </mat-expansion-panel-header>
+           
+        <mat-nav-list >
+            <a mat-list-item routerLink="fastFood">
+                complains 
+            </a>
+            <a mat-list-item routerLink="healthy-food">
+                <mat-icon>healthy-food</mat-icon><span>Ratings</span>
+            </a>
+        </mat-nav-list>
+        </mat-expansion-panel>
+       
+</mat-nav-list> </mat-drawer>
+<mat-drawer-content>
+    <ng-content>
+        
+    </ng-content>
+</mat-drawer-content>
+</mat-drawer-container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
